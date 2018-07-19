@@ -20,6 +20,14 @@ html{ /*1*/
     text-rendering: optimizeLegibility;
 
 }
+.clearfix {zoom: 1}
+.clearfix:after {  /* clearfix to clear float to images*/
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 /*-------------------------------------------------------------------*/
 /*REUSABLE COMPONENTS*/
 /*-------------------------------------------------------------------*/
@@ -242,4 +250,54 @@ header { /*2*/
 .meal-photo img:hover {
     opacity: 1;
     transform: scale(1.05);
+  
+}
+
+/*-------------------------------------------------------------------*/
+/*HOW IT WORKS*/
+/*-------------------------------------------------------------------*/
+
+.section-steps {
+    background-color: #f4f4f4;
+}
+
+.steps-box:first-child { /*first-child will bi options for first box. This is for 1st column phone picture */
+    text-align: right; /* works not only for text but pictures as well*/
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child { 
+    padding-right: 3%;
+    margin-top: 70px ;
+}
+
+.app-screen {
+    width:40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+.works-steps:last-of-type{ /* works similar like last child*/
+    margin-bottom: 80px;
+}
+.works-step div {  /* working on the numbers to make round*/
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
