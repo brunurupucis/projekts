@@ -114,7 +114,7 @@ h2:after { /* after h2*/
      width: 30px;
      text-align: center;
      color: #e67e22;
-     font-size:120%;
+     font-size: 120%;
      margin-right: 10px;
      line-height: 120%; /* icon city person and twitter to be in line with txt*/
      vertical-align: middle; /* icon city person and twitter to be in line with txt*/
@@ -123,7 +123,7 @@ h2:after { /* after h2*/
 
 /*----------LINKS-------------*/
  a:link,
- a:active {
+ a:visited {
      color: #e67e22;
      text-decoration: none;
      padding-bottom: 1px;
@@ -193,6 +193,7 @@ header { /*2*/
     background-size: cover;
     background-position: center;
     height: 100vh; /* to put background image in full wieve*/
+    background-attachment: fixed;
 
 }
 
@@ -309,26 +310,26 @@ header { /*2*/
 .works-step {
     margin-bottom: 50px;
 }
-.works-steps:last-of-type{ /* works similar like last child*/
+.works-steps:last-of-type { /* works similar like last child*/
     margin-bottom: 80px;
 }
 .works-step div {  /* working on the numbers to make round*/
     color: #e67e22;
-    border: 2px solid #e67e22;
-    display: inline-block;
-    border-radius: 50%;
+    font-size: 150%;
     height: 55px;
     width: 55px;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    display: inline-block;
     text-align: center;
-    padding: 5px;
-    float: left;
-    font-size: 150%;
     margin-right: 25px;
+    float: left;
+    padding: 5px; 
 }
 
 .btn-app:link, /* created because removed line under the app logos. It was created with twitter links from a:hover,
  a:active*/
-.btn-app:visited{
+.btn-app:visited {
     border: 0;   
 }
 .btn-app img {
@@ -352,3 +353,46 @@ header { /*2*/
     margin-bottom: 5px;
 }
 
+
+
+/*-------------------------------------------------------------------*/
+/*TESTIMONIALS*/
+/*-------------------------------------------------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg); /* thats why picture is in css folder*/
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed; /* makes background picture stay on place while everything is scrolled*/
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic; /* from top google fonts */
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content:"\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute; /* if have absolute option than parrant has to have relative position*/
+    top: -5px;
+    left: -5px;
+}
+
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
