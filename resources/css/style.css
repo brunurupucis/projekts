@@ -100,7 +100,7 @@ h2:after { /* after h2*/
     line-height: 145%;
 }
 
-/*----------icons-------------*/
+/*----------ICONS-------------*/
 
 .icon-big {
     font-size: 350%;
@@ -108,7 +108,38 @@ h2:after { /* after h2*/
     color: #e67e22;
     margin-bottom: 10px;
 }
-/*-----------BUTTONS----------*/
+
+ .icon-small {
+     display: inline-block;
+     width: 30px;
+     text-align: center;
+     color: #e67e22;
+     font-size:120%;
+     margin-right: 10px;
+     line-height: 120%; /* icon city person and twitter to be in line with txt*/
+     vertical-align: middle; /* icon city person and twitter to be in line with txt*/
+     margin-top: -5px; /* icon city person and twitter to be in line with txt*/
+}
+
+/*----------LINKS-------------*/
+ a:link,
+ a:active {
+     color: #e67e22;
+     text-decoration: none;
+     padding-bottom: 1px;
+     border-bottom: 1px solid #e67e22;
+     transition: border-bottom 0.2s, color 0.2s;
+ }
+ 
+ a:hover,
+ a:active {
+     color: #555;
+     border-bottom: 1px solid transparent;
+}
+     
+     
+   
+/*----------BUTTONS-------------*/
 
 .btn:link,
 .btn:visited { /* link means a element in normal state, visited state and changes look after visiting*/
@@ -118,8 +149,7 @@ h2:after { /* after h2*/
     text-decoration: none; /* remove underline*/
     border-radius: 200px;
     transition: background-color 0.2s, border 0.2s, color 0.2s; /* how quick buttons will change from one color to other */
-
-    
+ 
 }
 
 .btn-full:link,
@@ -296,8 +326,29 @@ header { /*2*/
     margin-right: 25px;
 }
 
+.btn-app:link, /* created because removed line under the app logos. It was created with twitter links from a:hover,
+ a:active*/
+.btn-app:visited{
+    border: 0;   
+}
 .btn-app img {
     height: 50px;
     width: auto;
     margin-right: 10px;
 }
+
+/*-------------------------------------------------------------------*/
+/*CITIES*/
+/*-------------------------------------------------------------------*/
+
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
