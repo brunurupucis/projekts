@@ -1,10 +1,12 @@
 <!DOCTYPE html> <!---->
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- to start show the screen from zoom 1, not smaller -->
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css"> <!-- from internet make app more normalize -->
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css"> <!--relative to browser window -->
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">  <!--including css icon folder to show icons on website -->
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css"> <!-- for different screens -->
         <link href="https://fonts.googleapis.com/css?family=Lato:400,300,300italic,100" rel="stylesheet" type="text/css"> <!-- from google fonts for facetype -->
         <title> Omnifood</title>
 
@@ -14,25 +16,26 @@
             <nav>
                 <div class="row">
                     <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
+                    <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
                     <ul class="main-nav">
-                        <li><a href="#">Food delivery</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Our cities</a></li>
-                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#features">Food delivery</a></li>
+                        <li><a href="#works">How it works</a></li>
+                        <li><a href="#cities">Our cities</a></li>
+                        <li><a href="#plans">Sign up</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="hero-text-box">
                 <h1>Goodbye junk food.<br> Hello super healthy meals.</h1>
-                <a class="btn btn-full" href="#">I’m hungry</a>
-                <a class="btn btn-ghost" href="#">Show me more</a>
+                <a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
+                <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
             </div>
         </header>
         
-        <section class="section-features">
+        <section class="section-features js--section-features" id="features">
             <div class="row">
                 <h2>Get food fast &mdash; not fast food.</h2>
-                <p class="long-copy">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+                <p class="long-copy">Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
                 </p>
             </div>
 
@@ -124,7 +127,7 @@
         </section>
         
         
-        <section class="section-steps">
+        <section class="section-steps" id="works">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1, 2, 3</h2>
             </div> 
@@ -151,7 +154,7 @@
                 </div> 
             </div> 
         </section>
-        <section class="section-cities">
+        <section class="section-cities" id="cities">
             <div class="row">
                 <h2>We're currently in these cities</h2>
             </div>
@@ -249,9 +252,9 @@
 
         </section>
 
-        <section class="section-plans">
+        <section class="section-plans js--section-plans" id="plans">
             <div class="row">
-                <h2>Start eating healthy today</h2>
+                <h2>Start eating healthy today</h2>
             </div>
             <div class="row">
                 <div class="col span-1-of-3">
@@ -259,7 +262,7 @@
                         <div>
                             <h3>Premium</h3>
                             <p class="plan-price">$399<span>/ month</span></p>
-                            <p class="plan-price-meal">That’s only 13.30$ per meal</p>
+                            <p class="plan-price-meal">That's only 13.30$ per meal</p>
                         </div>
                         <div>
                             <ul>
@@ -279,7 +282,7 @@
                         <div>
                             <h3>Pro</h3>
                             <p class="plan-price">149$ <span>/ month</span></p>
-                            <p class="plan-price-meal">That’s only 14.90$ per meal</p>
+                            <p class="plan-price-meal">That's only 14.90$ per meal</p>
                         </div>
                         <div>
                             <ul>
@@ -407,8 +410,15 @@
                 </p>
             </div> 
         </footer>
-       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--all this scripts must be before body closes -->
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script> <!--to start navigation to show up when sliding down -->
+    <script src="resources/js/script.js"></script> <!-- make sure own script is last one -->
+    
     </body>
+    
 </html>
 
 
@@ -483,5 +493,15 @@
     A cool way of using social icons
    
     designpieces.com/2012/12/social-media-colors-hex-and-rgb/
+
+    auto prefixer to prefix css
+
+    https://caniuse.com/
+
+    cool jquery features. - Magnific Popup, Tooltipster, Myplace, Typer, On page scroll, 
+
+    https://developers.google.com/speed/libraries/
+
+    https://css-tricks.com/snippets/jquery/smooth-scrolling/
 -->
 
