@@ -197,8 +197,8 @@ input[type=submit]:active { /* input is for send button to look the same*/
 /*-------------------------------------------------------------------*/
 
 header { /*2*/
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url(img/hero.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hero.jpg);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url(img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hero-min.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh; /* to put background image in full wieve*/
@@ -419,8 +419,8 @@ header { /*2*/
 /*-------------------------------------------------------------------*/
 
 .section-testimonials {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg); /* thats why picture is in css folder*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg); /* thats why picture is in css folder*/
     background-size: cover;
     color: #fff;
     background-attachment: fixed; /* makes background picture stay on place while everything is scrolled*/
@@ -520,7 +520,7 @@ cite img {
 
 .contact-form {
     
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 
 }
@@ -545,6 +545,51 @@ input[type=checkbox] {
 }
 
 *:focus {outline: none;} /* to remove google chrome added blue lines*/
+
+.map-box {
+    width: 100%;
+    height: 630px;
+    position: relative; /* because parrent has relative  position */
+
+}
+
+
+.map {
+    width: 100%;
+    height: 630px;
+    position: relative; /* to make sure form-box can overlap map */
+    z-index: 0; /* more than 1 element overlaping and why shows first*/
+}
+
+.form-box {
+    position: absolute;
+    width: 50%;
+    top: 0 ;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8) ;
+    z-index: 10;  /* will overlap the map */
+    height: 630px;
+    padding-top: 40px;
+}
+
+.form-messages {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    display: none;
+    color: #333;
+}
+
+.form-messages .success {
+    background-color: rgba(38, 191, 69, 0.8);
+}
+
+.form-messages .error {
+    background-color: rgba(209, 46, 46, 0.8)
+}
+
 
 /*-------------------------------------------------------------------*/
 /*FOOTER*/

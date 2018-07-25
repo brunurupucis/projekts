@@ -77,20 +77,38 @@ $(document).ready(() => {
     }, {
         offset: '50%' 
     });
-});
 
-/* mobile navigation*/
+    /* mobile navigation*/
 
-$('.js--nav-icon').click(() => {
-    const nav = $('.js--main-nav');
-    const icon = $('.js--nav-icon i');
+    $('.js--nav-icon').click(() => {
+        const nav = $('.js--main-nav');
+        const icon = $('.js--nav-icon i');
     
-    nav.slideToggle(200); /* change menu icon to x and back*/
-    if (icon.hasClass('ion-navicon-round')) {
-        icon.addClass('ion-close-round');
-        icon.removeClass('ion-navicon-round');
-    } else {
-        icon.addClass('ion-navicon-round');
-        icon.removeClass('ion-close-round');
-    }
+        nav.slideToggle(200); /* change menu icon to x and back*/
+        if (icon.hasClass('ion-navicon-round')) {
+            icon.addClass('ion-close-round');
+            icon.removeClass('ion-navicon-round');
+        } else {
+            icon.addClass('ion-navicon-round');
+            icon.removeClass('ion-close-round');
+        }
+    });
+
+    /* Maps */ 
+
+    const map = new GMaps({ /* coordinates */
+        div: '.map',
+        lat: 38.7436266,
+        lng: -9.05,
+        zoom: 12
+    });
+
+    map.addMarker({ /* markers*/
+        lat: 38.7436266,
+        lng: -9.1602037,
+        title: 'Lisbon',
+        infoWindow: {
+            content: '<p>Our Lisbon HQ</p>'
+          }
+    });
 });
