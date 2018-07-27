@@ -23,5 +23,5 @@
     mail($recipient, $subject, $email_content, $email_headers);
     
     // Redirect to the index.html page with success code
-    header("Location: https://relax0.000webhostapp.com/index.php?success=-1#form");
+    header("Location: https://relax0.000webhostapp.com/index.php?success=1#form");
 ?>
