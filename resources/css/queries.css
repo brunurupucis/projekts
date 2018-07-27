@@ -1,9 +1,9 @@
 
-/* This is for good looking on any screen */
+
 
 /* Big tablet  to 1200px (width smaller than 1140px) */
 @media only screen and (max-width: 1200px) {
-    .hero-text-box { /* check txt in developer tools  and it works only until 1200px*/
+    .hero-text-box { 
         
         width: 100%;
         padding: 0 2% ;
