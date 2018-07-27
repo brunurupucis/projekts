@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- to start show the screen from zoom 1, not smaller -->
         <meta name="description" content="Omifood is a premium food delivery service with the mission to bring affordble and healty meals to as many people as possible."> <!-- for search engine -->
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
 
 
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css"> <!-- from internet make app more normalize -->
@@ -353,15 +354,15 @@
                         <div class="row">
 
                            
-                            <div class="form-messages success">
-                                Thank you! Your message has been sent.
-                            </div>
+                            <?php
+                            if($_GET['success'] == 1){
+                                echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
+                            }
 
-                            <!--<div class="form-messages error">
-                                Opps! Something went wrong. Please try again!
-                            </div>-->
-
-                            
+                            if($_GET['success'] == -1){
+                                echo "<div class=\"form-messages error\">Opps! Something went wrong. Please try again!</div>";
+                            }
+                            ?>
                         </div>
                         <div class="row">
                             <div class="col span-1-of-3">
