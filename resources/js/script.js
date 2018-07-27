@@ -1,8 +1,6 @@
-/*eslint max-len: [2, 400, 4]*/
-/* eslint-disable no-undef*/
+
 $(document).ready(() => {
-    /* to show up sticky navigation */
-    $('.js--section-features').waypoint((direction) => { /* direction knows if you scrolling up or down */
+    $('.js--section-features').waypoint((direction) => {
         if (direction === 'down') {
             $('nav').addClass('sticky');
         } else {
@@ -11,7 +9,7 @@ $(document).ready(() => {
     }, {
         offset: '60px;'
     });
-   /* Scroll on buttons*/
+ 
    $('.js--scroll-to-plans').click(() => {
        $('html,body').animate({ scrollTop: $('.js--section-plans').offset().top }, 1000);
    });
@@ -21,23 +19,6 @@ $(document).ready(() => {
     });
 
 
-    /* navigation scroll*/
-
-/*$(function() { full with mistakes, needs to check for myself and test
-        $(‘a[href*=#]:not([href=#])’).click(function() {
-            if (location.pathname.replace(/^\//,”) == this.pathname.replace(/^\//,”) && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $(‘[name=’ + this.hash.slice(1) +’]’);
-                if (target.length) {
-                    $(‘html,body’).animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    */
     $(() => {
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
@@ -53,7 +34,7 @@ $(document).ready(() => {
         });
     });
     
-      /* animations on scroll*/
+    
     $('.js--wp-1').waypoint(() => {
         $('.js--wp-1').addClass('animated fadeIn');
     }, {
@@ -78,13 +59,13 @@ $(document).ready(() => {
         offset: '50%' 
     });
 
-    /* mobile navigation*/
+   
 
     $('.js--nav-icon').click(() => {
         const nav = $('.js--main-nav');
         const icon = $('.js--nav-icon i');
     
-        nav.slideToggle(200); /* change menu icon to x and back*/
+        nav.slideToggle(200);
         if (icon.hasClass('ion-navicon-round')) {
             icon.addClass('ion-close-round');
             icon.removeClass('ion-navicon-round');
@@ -94,16 +75,16 @@ $(document).ready(() => {
         }
     });
 
-    /* Maps */ 
+   
 
-    const map = new GMaps({ /* coordinates */
+    const map = new GMaps({ 
         div: '.map',
         lat: 38.7436266,
         lng: -9.05,
         zoom: 12
     });
 
-    map.addMarker({ /* markers*/
+    map.addMarker({
         lat: 38.7436266,
         lng: -9.1602037,
         title: 'Lisbon',

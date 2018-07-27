@@ -144,5 +144,16 @@
 
     section { padding: 25px 0; }
     .contact-form { width: 100%; }
+    h1 { font-size: 100%; }
+    .mobile-nav-icon i {
+        font-size: 150%;
+        color: #fff;
+    }
+    .logo {
+        height: 50px;
+        width: auto;
+        float: left;
+        margin-top: 37px;
+    }
 }
 
